@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice #{{ $pemesanan->id }} - Lion Air</title>
+  <title>Invoice #{{ $pemesanan->id }} - Singa Tanah</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,9 +31,9 @@
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center gap-3">
       <div class="bg-white p-1 rounded-lg">
-        <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+        <img src="{{ asset('images/lionair-logo.png') }}" alt="Singa Tanah" class="h-8">
       </div>
-      <span class="font-bold text-lg">Lion Air</span>
+      <span class="font-bold text-lg">Singa Tanah</span>
     </div>
     <nav class="hidden md:flex items-center gap-6">
       <a href="{{ url('/') }}" class="hover:text-red-100">Beranda</a>
@@ -114,7 +114,7 @@
 
         <!-- Footer teks -->
         <div class="border-t pt-4 text-gray-700">
-          <p>Terima kasih telah melakukan pembayaran di <span class="font-semibold">Lion Air</span>.</p>
+          <p>Terima kasih telah melakukan pembayaran di <span class="font-semibold">Singa Tanah</span>.</p>
           <p class="text-sm text-gray-500">Simpan halaman ini sebagai bukti pemesanan Anda.</p>
         </div>
       </div>
@@ -136,9 +136,9 @@
     <div>
       <div class="flex items-center gap-3 mb-3">
         <div class="bg-white p-1 rounded-lg">
-          <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+          <img src="{{ asset('images/lionair-logo.png') }}" alt="Singa Tanah" class="h-8">
         </div>
-        <span class="font-bold text-lg">Lion Air</span>
+        <span class="font-bold text-lg">Singa Tanah</span>
       </div>
       <p class="text-gray-400 text-sm">Maskapai penerbangan terpercaya di Indonesia.</p>
     </div>
@@ -152,12 +152,12 @@
     </div>
     <div>
       <h3 class="font-semibold mb-3">Hubungi Kami</h3>
-      <p class="text-gray-400 text-sm">Email: cs@lionair.co.id</p>
+      <p class="text-gray-400 text-sm">Email: cs@singatanah.co.id</p>
       <p class="text-gray-400 text-sm">Telepon: +62 21 6379 8000</p>
     </div>
   </div>
   <div class="bg-gray-900 text-center text-gray-400 py-4 text-sm">
-    &copy; 2025 Lion Air. All rights reserved.
+    &copy; 2025 Singa Tanah. All rights reserved.
   </div>
 </footer>
 

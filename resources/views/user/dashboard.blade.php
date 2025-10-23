@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="utf-8">
-    <title>Dashboard Publik - Lion Air</title>
+    <title>Dashboard Publik - Singa Tanah</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1093,18 +1093,18 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
             <div class="bg-white p-1 rounded-lg">
-                <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                <img src="{{ asset('images/singatanah-logo.png') }}" alt="Singa Tanah" class="h-8">
             </div>
-            <span class="font-bold text-lg">Lion Air</span>
+            <span class="font-bold text-lg">Singa Tanah</span>
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Beranda</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Penerbangan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Tentang Kami</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Bantuan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Kontak</a>
+            <a href="#beranda" class="font-medium hover:text-red-100 transition-colors">Beranda</a>
+            <a href="#penerbangan" class="font-medium hover:text-red-100 transition-colors">Penerbangan</a>
+            <a href="#tentang-kami" class="font-medium hover:text-red-100 transition-colors">Tentang Kami</a>
+            <a href="#bantuan" class="font-medium hover:text-red-100 transition-colors">Bantuan</a>
+            <a href="#kontak" class="font-medium hover:text-red-100 transition-colors">Kontak</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -1178,11 +1178,11 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu closed md:hidden bg-red-600 mt-2 py-3 px-4 rounded-lg shadow-lg">
         <nav class="flex flex-col gap-3">
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Beranda</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Penerbangan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Tentang Kami</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Bantuan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Kontak</a>
+            <a href="#beranda" class="font-medium hover:text-red-100 transition-colors py-1">Beranda</a>
+            <a href="#penerbangan" class="font-medium hover:text-red-100 transition-colors py-1">Penerbangan</a>
+            <a href="#tentang-kami" class="font-medium hover:text-red-100 transition-colors py-1">Tentang Kami</a>
+            <a href="#bantuan" class="font-medium hover:text-red-100 transition-colors py-1">Bantuan</a>
+            <a href="#kontak" class="font-medium hover:text-red-100 transition-colors py-1">Kontak</a>
             <div class="border-t border-red-500 pt-3 mt-1">
                 <a href="#" class="flex items-center gap-2 font-medium hover:text-red-100 transition-colors py-1">
                     <i class="fas fa-globe"></i>
@@ -1194,11 +1194,11 @@
 </header>
 
 <!-- Hero Section -->
-<section class="hero-gradient text-white py-12 md:py-16">
+<section id="beranda" class="hero-gradient text-white py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Jelajahi Dunia Bersama Lion Air</h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Jelajahi Dunia Bersama Singa Tanah</h1>
                 <p class="text-xl mb-8 opacity-90">Terbang dengan nyaman dan aman ke berbagai destinasi impian Anda dengan harga terbaik.</p>
                 <div class="flex flex-wrap gap-4">
                     <div class="flex items-center gap-2">
@@ -1215,47 +1215,19 @@
                     </div>
                 </div>
             </div>
-            <div class="md:w-1/2">
-                <div class="bg-white rounded-2xl p-6 search-box">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Cari Penerbangan</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Kota Asal</label>
-                            <div class="relative">
-                                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" placeholder="Jakarta (CGK)">
-                                <i class="fas fa-exchange-alt absolute right-3 top-3 text-gray-400 transform rotate-90"></i>
-                            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white rounded-2xl p-6 search-box max-w-md w-full">
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <div class="w-48 h-48 mb-6 flex items-center justify-center">
+                            <i class="fas fa-plane text-red-500 text-8xl"></i>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Kota Tujuan</label>
-                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" placeholder="Denpasar (DPS)">
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Maskapai Terpercaya</h3>
+                        <p class="text-gray-600 text-center mb-6">Terbang dengan armada modern dan layanan terbaik untuk pengalaman perjalanan yang tak terlupakan.</p>
+                        <a href="#penerbangan" class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            <i class="fas fa-search"></i>
+                            Lihat Penerbangan
+                        </a>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Berangkat</label>
-                            <input type="date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" value="{{ date('Y-m-d') }}">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Pulang (Opsional)</label>
-                            <input type="date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Penumpang & Kelas</label>
-                        <div class="flex items-center justify-between p-3 border border-gray-300 rounded-lg">
-                            <span>1 Dewasa, Ekonomi</span>
-                            <i class="fas fa-chevron-down text-gray-400"></i>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
-                        <i class="fas fa-search"></i>
-                        Cari Penerbangan
-                    </button>
                 </div>
             </div>
         </div>
@@ -1263,7 +1235,7 @@
 </section>
 
 <!-- Promo Section -->
-<section class="py-12 bg-white">
+<section id="penerbangan" class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-8">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Penawaran Spesial</h2>
@@ -1299,7 +1271,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Tentang Maskapai Kami</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Mengenal lebih dekat Lion Air dan komitmen kami dalam memberikan layanan terbaik</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Mengenal lebih dekat Singa Tanah dan komitmen kami dalam memberikan layanan terbaik</p>
         </div>
         
         <div class="maskapai-info-section">
@@ -1309,7 +1281,7 @@
                         <i class="fas fa-history"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Sejarah</h3>
-                    <p class="text-gray-600 text-sm">Didirikan pada tahun 1999, Lion Air telah berkembang menjadi salah satu maskapai penerbangan terbesar di Indonesia dengan jaringan rute yang luas.</p>
+                    <p class="text-gray-600 text-sm">Didirikan pada tahun 2005, Singa Tanah telah berkembang menjadi salah satu maskapai penerbangan terbesar di Indonesia dengan jaringan rute yang luas.</p>
                 </div>
                 
                 <div class="info-card">
@@ -1317,7 +1289,7 @@
                         <i class="fas fa-medal"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Prestasi</h3>
-                    <p class="text-gray-600 text-sm">Lion Air telah menerima berbagai penghargaan atas komitmennya terhadap keselamatan dan kualitas layanan penerbangan.</p>
+                    <p class="text-gray-600 text-sm">Singa Tanah telah menerima berbagai penghargaan atas komitmennya terhadap keselamatan dan kualitas layanan penerbangan.</p>
                 </div>
                 
                 <div class="info-card">
@@ -1384,12 +1356,12 @@
     </div>
 </section>
 
-<!-- Tentang Lion Air Section -->
-<section class="py-12 bg-gray-50">
+<!-- Tentang Singa Tanah Section -->
+<section id="tentang-kami" class="py-12 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Tentang Lion Air</h2>
-            <p class="text-gray-600 max-w-3xl mx-auto">Lion Air adalah maskapai penerbangan terkemuka di Indonesia yang telah melayani jutaan penumpang dengan jaringan rute domestik dan internasional yang luas.</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Tentang Singa Tanah</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Singa Tanah adalah maskapai penerbangan terkemuka di Indonesia yang telah melayani jutaan penumpang dengan jaringan rute domestik dan internasional yang luas.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -1399,7 +1371,7 @@
                     <i class="fas fa-plane"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">Armada Modern</h3>
-                <p class="text-gray-600">Lebih dari 120 pesawat dengan teknologi terkini untuk kenyamanan dan keamanan perjalanan Anda.</p>
+                <p class="text-gray-600">Lebih dari 100 pesawat dengan teknologi terkini untuk kenyamanan dan keamanan perjalanan Anda.</p>
             </div>
             
             <!-- Feature 2 -->
@@ -1408,7 +1380,7 @@
                     <i class="fas fa-route"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">Jaringan Luas</h3>
-                <p class="text-gray-600">Melayani lebih dari 70 destinasi di Indonesia dan berbagai kota internasional di Asia.</p>
+                <p class="text-gray-600">Melayani lebih dari 60 destinasi di Indonesia dan berbagai kota internasional di Asia.</p>
             </div>
             
             <!-- Feature 3 -->
@@ -1433,19 +1405,19 @@
         <!-- Statistics -->
         <div class="stats-grid mb-12">
             <div class="stat-card">
-                <div class="stat-number">25+</div>
+                <div class="stat-number">18+</div>
                 <div class="stat-label">Tahun Pengalaman</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">70+</div>
+                <div class="stat-number">60+</div>
                 <div class="stat-label">Destinasi</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">120+</div>
+                <div class="stat-number">100+</div>
                 <div class="stat-label">Pesawat</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">50Jt+</div>
+                <div class="stat-number">40Jt+</div>
                 <div class="stat-label">Penumpang/Tahun</div>
             </div>
         </div>
@@ -1453,11 +1425,11 @@
 </section>
 
 <!-- Testimoni Section -->
-<section class="py-12 bg-white">
+<section id="bantuan" class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Apa Kata Pelanggan Kami</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Pengalaman nyata dari penumpang setia Lion Air</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Pengalaman nyata dari penumpang setia Singa Tanah</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1469,7 +1441,7 @@
                         <p class="text-sm text-gray-600">Business Traveler</p>
                     </div>
                 </div>
-                <p class="text-gray-600">"Pelayanan Lion Air sangat memuaskan. Penerbangan tepat waktu dan kru kabin sangat ramah. Recommended!"</p>
+                <p class="text-gray-600">"Pelayanan Singa Tanah sangat memuaskan. Penerbangan tepat waktu dan kru kabin sangat ramah. Recommended!"</p>
                 <div class="flex text-yellow-400 mt-3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -1487,7 +1459,7 @@
                         <p class="text-sm text-gray-600">Family Traveler</p>
                     </div>
                 </div>
-                <p class="text-gray-600">"Harga terjangkau dengan kualitas pelayanan yang baik. Keluarga saya selalu memilih Lion Air untuk liburan."</p>
+                <p class="text-gray-600">"Harga terjangkau dengan kualitas pelayanan yang baik. Keluarga saya selalu memilih Singa Tanah untuk liburan."</p>
                 <div class="flex text-yellow-400 mt-3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -1505,7 +1477,7 @@
                         <p class="text-sm text-gray-600">Frequent Flyer</p>
                     </div>
                 </div>
-                <p class="text-gray-600">"Program rewards Lion Air sangat menguntungkan. Sudah berkali-kali dapat diskon dan upgrade gratis."</p>
+                <p class="text-gray-600">"Program rewards Singa Tanah sangat menguntungkan. Sudah berkali-kali dapat diskon dan upgrade gratis."</p>
                 <div class="flex text-yellow-400 mt-3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -1589,21 +1561,21 @@
                 
                 <div class="flight-status-item status-on-time">
                     <div class="status-indicator"></div>
-                    <div class="flight-status-code">JT 123</div>
+                    <div class="flight-status-code">ST 123</div>
                     <div class="flight-status-route">CGK - DPS</div>
                     <div class="flight-status-time">10:30</div>
                 </div>
                 
                 <div class="flight-status-item status-delayed">
                     <div class="status-indicator"></div>
-                    <div class="flight-status-code">JT 456</div>
+                    <div class="flight-status-code">ST 456</div>
                     <div class="flight-status-route">SUB - JOG</div>
                     <div class="flight-status-time">11:45</div>
                 </div>
                 
                 <div class="flight-status-item status-on-time">
                     <div class="status-indicator"></div>
-                    <div class="flight-status-code">JT 789</div>
+                    <div class="flight-status-code">ST 789</div>
                     <div class="flight-status-route">BDO - UPG</div>
                     <div class="flight-status-time">13:20</div>
                 </div>
@@ -1637,10 +1609,10 @@
                             <div class="flight-list-header">
                                 <div class="flight-airline">
                                     <div class="flight-airline-logo">
-                                        LA
+                                        ST
                                     </div>
                                     <div class="flight-airline-name">
-                                        Lion Air
+                                        Singa Tanah
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-2">
@@ -1843,15 +1815,15 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-gray-800 text-white py-12">
+<footer id="kontak" class="bg-gray-800 text-white py-12">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
                 <div class="flex items-center gap-3 mb-4">
                     <div class="bg-white p-1 rounded-lg">
-                        <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                        <img src="{{ asset('images/singatanah-logo.png') }}" alt="Singa Tanah" class="h-8">
                     </div>
-                    <span class="font-bold text-lg">Lion Air</span>
+                    <span class="font-bold text-lg">Singa Tanah</span>
                 </div>
                 <p class="text-gray-400 mb-4">Maskapai penerbangan terkemuka di Indonesia yang melayani berbagai destinasi domestik dan internasional.</p>
                 <div class="flex gap-4">
@@ -1873,7 +1845,7 @@
             <div>
                 <h3 class="font-semibold text-lg mb-4">Tautan Cepat</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tentang Kami</a></li>
+                    <li><a href="#tentang-kami" class="text-gray-400 hover:text-white transition-colors">Tentang Kami</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Karir</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Berita</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Kebijakan Privasi</a></li>
@@ -1884,10 +1856,10 @@
             <div>
                 <h3 class="font-semibold text-lg mb-4">Layanan</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Penerbangan</a></li>
+                    <li><a href="#penerbangan" class="text-gray-400 hover:text-white transition-colors">Penerbangan</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Status Penerbangan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Bantuan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hubungi Kami</a></li>
+                    <li><a href="#bantuan" class="text-gray-400 hover:text-white transition-colors">Bantuan</a></li>
+                    <li><a href="#kontak" class="text-gray-400 hover:text-white transition-colors">Hubungi Kami</a></li>
                 </ul>
             </div>
             
@@ -1896,11 +1868,11 @@
                 <ul class="space-y-2">
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-phone"></i>
-                        <span>+62 21 6379 8000</span>
+                        <span>+62 21 6379 9000</span>
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-envelope"></i>
-                        <span>info@lionair.co.id</span>
+                        <span>info@singatanah.co.id</span>
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-map-marker-alt"></i>
@@ -1923,18 +1895,18 @@
         </div>
         
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2023 Lion Air. All rights reserved.</p>
+            <p>&copy; 2023 Singa Tanah. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <!-- Mobile Bottom Navigation -->
 <div class="mobile-bottom-nav md:hidden">
-    <a href="#" class="mobile-nav-item active">
+    <a href="#beranda" class="mobile-nav-item active">
         <i class="fas fa-home mobile-nav-icon"></i>
         <span>Beranda</span>
     </a>
-    <a href="#" class="mobile-nav-item">
+    <a href="#penerbangan" class="mobile-nav-item">
         <i class="fas fa-search mobile-nav-icon"></i>
         <span>Cari</span>
     </a>
@@ -2036,6 +2008,36 @@
           // Trigger initial gradient
           priceInput.dispatchEvent(new Event('input'));
       }
+  })();
+  
+  // Smooth scrolling for navigation links
+  (function() {
+      const navLinks = document.querySelectorAll('a[href^="#"]');
+      
+      navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              const targetId = this.getAttribute('href');
+              if (targetId === '#') return;
+              
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                  // Close mobile menu if open
+                  const mobileMenu = document.getElementById('mobileMenu');
+                  if (mobileMenu) {
+                      mobileMenu.classList.add('closed');
+                      mobileMenu.classList.remove('open');
+                  }
+                  
+                  // Scroll to target
+                  window.scrollTo({
+                      top: targetElement.offsetTop - 80,
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
   })();
 </script>
 

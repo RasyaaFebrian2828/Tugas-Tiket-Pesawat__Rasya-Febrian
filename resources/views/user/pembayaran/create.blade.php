@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Pembayaran - Lion Air</title>
+    <title>Upload Pembayaran - Singa Tanah</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -157,18 +157,18 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
             <div class="bg-white p-1 rounded-lg">
-                <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                <div class="h-8 w-8 bg-red-600 rounded flex items-center justify-center text-white font-bold">ST</div>
             </div>
-            <span class="font-bold text-lg">Lion Air</span>
+            <span class="font-bold text-lg">Singa Tanah</span>
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Beranda</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Penerbangan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Tentang Kami</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Bantuan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors">Kontak</a>
+            <a href="/" class="font-medium hover:text-red-100 transition-colors">Beranda</a>
+            <a href="/penerbangan" class="font-medium hover:text-red-100 transition-colors">Penerbangan</a>
+            <a href="/pemesanan" class="font-medium hover:text-red-100 transition-colors">Pemesanan Saya</a>
+            <a href="/tentang-kami" class="font-medium hover:text-red-100 transition-colors">Tentang Kami</a>
+            <a href="/bantuan" class="font-medium hover:text-red-100 transition-colors">Bantuan</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -196,10 +196,12 @@
                 <!-- profile dropdown -->
                 <div class="relative" id="profileRoot">
                     <button id="profileBtn" class="flex items-center gap-2 bg-white text-red-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                        <img src="{{ asset('images/avatar.png') }}" alt="avatar" class="w-8 h-8 rounded-full object-cover">
+                        <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold">
+                            {{ substr(auth()->user()->name, 0, 1) }}
+                        </div>
                         <span class="hidden sm:inline">{{ auth()->user()->name }}</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
 
@@ -242,11 +244,11 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu closed md:hidden bg-red-600 mt-2 py-3 px-4 rounded-lg shadow-lg">
         <nav class="flex flex-col gap-3">
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Beranda</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Penerbangan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Tentang Kami</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Bantuan</a>
-            <a href="#" class="font-medium hover:text-red-100 transition-colors py-1">Kontak</a>
+            <a href="/" class="font-medium hover:text-red-100 transition-colors py-1">Beranda</a>
+            <a href="/penerbangan" class="font-medium hover:text-red-100 transition-colors py-1">Penerbangan</a>
+            <a href="/pemesanan" class="font-medium hover:text-red-100 transition-colors py-1">Pemesanan Saya</a>
+            <a href="/tentang-kami" class="font-medium hover:text-red-100 transition-colors py-1">Tentang Kami</a>
+            <a href="/bantuan" class="font-medium hover:text-red-100 transition-colors py-1">Bantuan</a>
             <div class="border-t border-red-500 pt-3 mt-1">
                 <a href="#" class="flex items-center gap-2 font-medium hover:text-red-100 transition-colors py-1">
                     <i class="fas fa-globe"></i>
@@ -265,7 +267,7 @@
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-3">
                     <li class="inline-flex items-center">
-                        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-red-600">
+                        <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-red-600">
                             <i class="fas fa-home mr-2"></i>
                             Beranda
                         </a>
@@ -295,7 +297,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Form Upload -->
             <div class="lg:col-span-2">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover" id="upload-form">
                     <div class="hero-gradient text-white p-6">
                         <h2 class="text-xl font-bold">Pembayaran Pesanan #{{ $pemesanan->id }}</h2>
                         <p class="opacity-90 mt-1">Upload bukti pembayaran untuk menyelesaikan pemesanan</p>
@@ -303,7 +305,7 @@
                     
                     <div class="p-6">
                         <!-- Order Summary -->
-                        <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                        <div class="mb-6 p-4 bg-gray-50 rounded-lg" id="order-summary">
                             <h3 class="font-semibold text-gray-800 mb-3">Ringkasan Pesanan</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -377,7 +379,7 @@
                             </div>
                             
                             <!-- Terms and Conditions -->
-                            <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg" id="payment-info">
                                 <div class="flex items-start">
                                     <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
                                     <div>
@@ -408,7 +410,7 @@
             
             <!-- Sidebar Info -->
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-xl shadow-md p-6 sticky top-24 card-hover">
+                <div class="bg-white rounded-xl shadow-md p-6 sticky top-24 card-hover" id="payment-sidebar">
                     <h3 class="font-semibold text-gray-800 mb-4">Informasi Pembayaran</h3>
                     
                     <div class="space-y-4">
@@ -443,18 +445,18 @@
                         </div>
                     </div>
                     
-                    <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="mt-6 pt-6 border-t border-gray-200" id="help-section">
                         <h4 class="font-medium text-gray-800 mb-3">Butuh Bantuan?</h4>
                         <div class="space-y-2">
-                            <a href="#" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
+                            <a href="tel:+622163798000" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
                                 <i class="fas fa-phone w-4"></i>
                                 <span>+62 21 6379 8000</span>
                             </a>
-                            <a href="#" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
+                            <a href="mailto:cs@singatanah.co.id" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
                                 <i class="fas fa-envelope w-4"></i>
-                                <span>cs@lionair.co.id</span>
+                                <span>cs@singatanah.co.id</span>
                             </a>
-                            <a href="#" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
+                            <a href="/bantuan" class="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 transition-colors">
                                 <i class="fas fa-comments w-4"></i>
                                 <span>Live Chat</span>
                             </a>
@@ -463,7 +465,7 @@
                 </div>
                 
                 <!-- Payment Methods Info -->
-                <div class="bg-white rounded-xl shadow-md p-6 mt-6 card-hover">
+                <div class="bg-white rounded-xl shadow-md p-6 mt-6 card-hover" id="payment-methods">
                     <h3 class="font-semibold text-gray-800 mb-4">Metode Pembayaran yang Didukung</h3>
                     
                     <div class="grid grid-cols-2 gap-3">
@@ -497,9 +499,9 @@
             <div>
                 <div class="flex items-center gap-3 mb-4">
                     <div class="bg-white p-1 rounded-lg">
-                        <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                        <div class="h-8 w-8 bg-red-600 rounded flex items-center justify-center text-white font-bold">ST</div>
                     </div>
-                    <span class="font-bold text-lg">Lion Air</span>
+                    <span class="font-bold text-lg">Singa Tanah</span>
                 </div>
                 <p class="text-gray-400 mb-4">Maskapai penerbangan terkemuka di Indonesia yang melayani berbagai destinasi domestik dan internasional.</p>
                 <div class="flex gap-4">
@@ -521,21 +523,21 @@
             <div>
                 <h3 class="font-semibold text-lg mb-4">Tautan Cepat</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tentang Kami</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Karir</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Berita</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Kebijakan Privasi</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Syarat & Ketentuan</a></li>
+                    <li><a href="/tentang-kami" class="text-gray-400 hover:text-white transition-colors">Tentang Kami</a></li>
+                    <li><a href="/karir" class="text-gray-400 hover:text-white transition-colors">Karir</a></li>
+                    <li><a href="/berita" class="text-gray-400 hover:text-white transition-colors">Berita</a></li>
+                    <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                    <li><a href="/terms" class="text-gray-400 hover:text-white transition-colors">Syarat & Ketentuan</a></li>
                 </ul>
             </div>
             
             <div>
                 <h3 class="font-semibold text-lg mb-4">Layanan</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Penerbangan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Status Penerbangan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Bantuan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hubungi Kami</a></li>
+                    <li><a href="/penerbangan" class="text-gray-400 hover:text-white transition-colors">Penerbangan</a></li>
+                    <li><a href="/status-penerbangan" class="text-gray-400 hover:text-white transition-colors">Status Penerbangan</a></li>
+                    <li><a href="/bantuan" class="text-gray-400 hover:text-white transition-colors">Bantuan</a></li>
+                    <li><a href="/kontak" class="text-gray-400 hover:text-white transition-colors">Hubungi Kami</a></li>
                 </ul>
             </div>
             
@@ -548,7 +550,7 @@
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-envelope"></i>
-                        <span>info@lionair.co.id</span>
+                        <span>info@singatanah.co.id</span>
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-map-marker-alt"></i>
@@ -571,26 +573,26 @@
         </div>
         
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2023 Lion Air. All rights reserved.</p>
+            <p>&copy; 2023 Singa Tanah. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <!-- Mobile Bottom Navigation -->
 <div class="mobile-bottom-nav md:hidden">
-    <a href="#" class="mobile-nav-item">
+    <a href="/" class="mobile-nav-item">
         <i class="fas fa-home mobile-nav-icon"></i>
         <span>Beranda</span>
     </a>
-    <a href="#" class="mobile-nav-item">
+    <a href="/penerbangan" class="mobile-nav-item">
         <i class="fas fa-search mobile-nav-icon"></i>
         <span>Cari</span>
     </a>
-    <a href="#" class="mobile-nav-item active">
+    <a href="/pemesanan" class="mobile-nav-item active">
         <i class="fas fa-ticket-alt mobile-nav-icon"></i>
         <span>Pesanan</span>
     </a>
-    <a href="#" class="mobile-nav-item">
+    <a href="/profile" class="mobile-nav-item">
         <i class="fas fa-user mobile-nav-icon"></i>
         <span>Profil</span>
     </a>

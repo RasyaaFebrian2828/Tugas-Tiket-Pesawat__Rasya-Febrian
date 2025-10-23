@@ -235,9 +235,9 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
             <div class="bg-white p-1 rounded-lg">
-                <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                <img src="{{ asset('images/lionair-logo.png') }}" alt="Singa Tanah" class="h-8">
             </div>
-            <span class="font-bold text-lg">Lion Air</span>
+            <span class="font-bold text-lg">Singa Tanah</span>
         </div>
 
         <!-- Desktop Navigation -->
@@ -338,7 +338,7 @@
 <main class="p-6 flex-1 max-w-7xl mx-auto w-full">
     <div class="mb-8">
         <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Daftar Penerbangan</h1>
-        <p class="text-gray-600">Kelola data penerbangan Lion Air</p>
+        <p class="text-gray-600">Kelola data penerbangan Singa Tanah</p>
     </div>
 
     <!-- Action Bar -->
@@ -351,8 +351,7 @@
             
             <select class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-red-500">
                 <option>Filter Maskapai</option>
-                <option>Lion Air</option>
-                <option>Batik Air</option>
+                <option>Singa Tanah</option>
             </select>
         </div>
         
@@ -383,7 +382,7 @@
                     @foreach($penerbangans as $p)
                         <tr class="border-t border-gray-200 hover:bg-gray-50 transition-colors">
                             <td class="p-4 font-medium">{{ $p->kode_penerbangan }}</td>
-                            <td class="p-4">{{ $p->maskapai }}</td>
+                            <td class="p-4 font-semibold">Singa Tanah</td>
                             <td class="p-4">{{ $p->asal }}</td>
                             <td class="p-4">{{ $p->tujuan }}</td>
                             <td class="p-4">{{ $p->waktu_berangkat }}</td>
@@ -436,11 +435,11 @@
             <div>
                 <div class="flex items-center gap-3 mb-4">
                     <div class="bg-white p-1 rounded-lg">
-                        <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+                        <img src="{{ asset('images/lionair-logo.png') }}" alt="Singa Tanah" class="h-8">
                     </div>
-                    <span class="font-bold text-lg">Lion Air</span>
+                    <span class="font-bold text-lg">Singa Tanah</span>
                 </div>
-                <p class="text-gray-400 mb-4">Panel Admin Lion Air - Sistem Manajemen Penerbangan</p>
+                <p class="text-gray-400 mb-4">Panel Admin Singa Tanah - Sistem Manajemen Penerbangan</p>
                 <div class="flex gap-4">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-facebook-f"></i>
@@ -486,7 +485,7 @@
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-envelope"></i>
-                        <span>admin@lionair.co.id</span>
+                        <span>admin@singatanah.co.id</span>
                     </li>
                     <li class="flex items-center gap-2 text-gray-400">
                         <i class="fas fa-map-marker-alt"></i>
@@ -497,7 +496,7 @@
         </div>
         
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2023 Lion Air. All rights reserved.</p>
+            <p>&copy; 2023 Singa Tanah. All rights reserved.</p>
         </div>
     </div>
 </footer>

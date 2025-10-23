@@ -2,18 +2,18 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Tambah Penerbangan</title>
+    <title>Tambah Penerbangan - Singa Tanah</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 p-6">
 <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
-    <h1 class="text-xl mb-4">Tambah Penerbangan</h1>
+    <h1 class="text-xl mb-4">Tambah Penerbangan - Singa Tanah</h1>
     <form action="{{ route('admin.penerbangan.store') }}" method="POST">
         @csrf
         <label>Kode Penerbangan</label>
         <input type="text" name="kode_penerbangan" class="w-full border p-2 mb-2" required>
         <label>Maskapai</label>
-        <input type="text" name="maskapai" class="w-full border p-2 mb-2" required>
+        <input type="text" name="maskapai" value="Singa Tanah" class="w-full border p-2 mb-2 bg-gray-100" readonly required>
         <label>Asal</label>
         <input type="text" name="asal" class="w-full border p-2 mb-2" required>
         <label>Tujuan</label>

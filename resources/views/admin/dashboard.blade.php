@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <title>Admin Dashboard - Lion Air</title>
+  <title>Admin Dashboard - Singa Tanah</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -122,9 +122,9 @@
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center gap-3">
       <div class="bg-white p-1 rounded-lg">
-        <img src="{{ asset('images/lionair-logo.png') }}" alt="Lion Air" class="h-8">
+        <img src="{{ asset('images/singatTanah-logo.png') }}" alt="Singa Tanah" class="h-8">
       </div>
-      <span class="font-bold text-lg">Lion Air - Admin Panel</span>
+      <span class="font-bold text-lg">Singa Tanah - Admin Panel</span>
     </div>
 
     <div class="flex items-center gap-3">
@@ -304,7 +304,7 @@
 <!-- FOOTER -->
 <footer class="bg-gray-800 text-white py-6 mt-8">
   <div class="max-w-7xl mx-auto px-4 text-center">
-    <p>&copy; 2023 Lion Air Admin Panel. All rights reserved.</p>
+    <p>&copy; 2023 Singa Tanah Admin Panel. All rights reserved.</p>
   </div>
 </footer>
 
